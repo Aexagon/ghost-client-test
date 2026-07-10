@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Ghost Client Test, a guide</title>
+<link rel="preconnect" href="https://api.fontshare.com">
+<link href="https://api.fontshare.com/v2/css?f[]=tanker@400&f[]=supreme@300,400,500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F3EDDF; --ink:#141210; --red:#D8260F; --yellow:#F2B705;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{background:var(--paper);color:var(--ink);font-family:'Supreme',sans-serif;font-weight:400;line-height:1.5;}
+  .frame{max-width:880px;margin:0 auto;padding:0 40px;}
+  section{padding:110px 0;border-top:1px solid var(--ink);}
+  section:first-of-type{border-top:0;}
+  h1,h2,.tk{font-family:'Tanker',sans-serif;font-weight:400;text-transform:uppercase;line-height:0.92;letter-spacing:0.01em;}
+  .kicker{font-size:13px;letter-spacing:0.22em;text-transform:uppercase;color:var(--red);font-weight:500;margin-bottom:28px;}
+
+  /* cover */
+  .cover{padding:150px 0 130px;}
+  .cover h1{font-size:112px;}
+  .cover h1 span{color:var(--red);}
+  .cover .sub{font-size:24px;font-weight:300;margin-top:36px;max-width:34ch;}
+  .cover .by{margin-top:64px;font-size:13px;letter-spacing:0.22em;text-transform:uppercase;}
+
+  /* idea */
+  .idea p{font-size:24px;font-weight:300;max-width:44ch;}
+  .idea p + p{margin-top:26px;}
+  .hl{background:var(--yellow);color:var(--ink);padding:1px 8px 2px;font-weight:500;}
+
+  /* method */
+  .step{display:grid;grid-template-columns:130px 1fr;gap:36px;padding:44px 0;border-top:1px solid var(--ink);align-items:start;}
+  .step:first-of-type{border-top:0;}
+  .step .n{font-family:'Tanker',sans-serif;font-size:64px;color:var(--red);line-height:0.9;}
+  .step h3{font-family:'Tanker',sans-serif;font-weight:400;text-transform:uppercase;font-size:28px;margin-bottom:10px;}
+  .step p{font-size:17px;max-width:52ch;}
+  .step .rule{margin-top:12px;font-size:14px;color:var(--red);font-weight:500;}
+
+  /* honesty */
+  .honest .row{display:grid;grid-template-columns:1fr 1fr;gap:60px;margin-top:8px;}
+  .honest h3{font-family:'Tanker',sans-serif;font-weight:400;text-transform:uppercase;font-size:26px;margin-bottom:12px;}
+  .honest p{font-size:16px;max-width:40ch;}
+
+  /* result */
+  .result table{width:100%;border-collapse:collapse;margin-top:8px;}
+  .result td{padding:16px 0;border-top:1px solid var(--ink);font-size:17px;vertical-align:top;}
+  .result td:last-child{text-align:right;font-family:'Tanker',sans-serif;text-transform:uppercase;font-size:20px;color:var(--red);white-space:nowrap;padding-left:24px;}
+  .result .verdict{margin-top:56px;font-size:24px;font-weight:300;max-width:42ch;}
+
+  /* see it */
+  .see a{display:block;padding:26px 0;border-top:1px solid var(--ink);color:var(--ink);text-decoration:none;font-size:17px;}
+  .see a:first-of-type{border-top:0;}
+  .see a strong{font-family:'Tanker',sans-serif;font-weight:400;text-transform:uppercase;font-size:24px;display:block;margin-bottom:4px;}
+  .see a:hover strong{color:var(--red);}
+  .see .url{font-size:13px;color:var(--red);word-break:break-all;margin-top:6px;}
+
+  /* diy */
+  .diy p{font-size:17px;max-width:54ch;}
+  .diy ol{margin-top:24px;padding-left:0;list-style:none;counter-reset:d;}
+  .diy li{counter-increment:d;padding:18px 0;border-top:1px solid var(--ink);font-size:17px;max-width:60ch;}
+  .diy li::before{content:counter(d,decimal-leading-zero);font-family:'Tanker',sans-serif;color:var(--red);margin-right:18px;font-size:20px;}
+
+  footer{padding:80px 0 90px;border-top:8px solid var(--ink);}
+  footer .mark{font-family:'Tanker',sans-serif;text-transform:uppercase;font-size:30px;}
+  footer p{font-size:13px;letter-spacing:0.18em;text-transform:uppercase;margin-top:10px;}
+
+  @media (max-width:700px){
+    .cover h1{font-size:56px;}
+    .step{grid-template-columns:64px 1fr;gap:20px;}
+    .step .n{font-size:40px;}
+    .honest .row{grid-template-columns:1fr;gap:40px;}
+    section{padding:70px 0;}
+    .frame{padding:0 22px;}
+  }
+</style>
+</head>
+<body>
+
+<div class="frame">
+
+  <section class="cover">
+    <div class="kicker">An experiment in machine taste</div>
+    <h1>The Ghost<br>Client <span>Test</span></h1>
+    <p class="sub">Can an AI hear a brand in the way a person talks, before anyone says a word about design?</p>
+    <div class="by">Aexagon · July 2026</div>
+  </section>
+
+  <section class="idea">
+    <div class="kicker">The idea</div>
+    <p>Most branding starts with a moodboard and a guess. We wanted the opposite: <span class="hl">every design choice traced to something the client actually said.</span></p>
+    <p>So we built a pipeline that listens first. Then we tested whether it truly listens, with a client who cannot be googled, because he does not exist.</p>
+  </section>
+
+  <section class="method">
+    <div class="kicker">The method</div>
+    <div class="step">
+      <div class="n">01</div>
+      <div>
+        <h3>Generate the ghost</h3>
+        <p>One agent invents a person. Dee, 29, Singapore hawker-food creator. It writes his raw interview transcripts, messy and real, and a sealed answer key stating the feelings his brand should give off.</p>
+        <div class="rule">Rule: the transcripts never mention design. Dee talks about steam and aunties, not hex codes.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">02</div>
+      <div>
+        <h3>Derive, blind</h3>
+        <p>A second agent reads only the transcripts. No answer key, no design library, no context. From voice alone it derives palette temperature, concrete colours, type, layout grammar, and what the brand must never be.</p>
+        <div class="rule">Rule: every pick cites a verbatim quote. No vibes-only choices.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">03</div>
+      <div>
+        <h3>Judge</h3>
+        <p>The derivation is scored against the sealed key it never saw. Tone words, temperature, type energy, banned moves, and the one feeling a visitor should get.</p>
+        <div class="rule">Rule: partial credit only for spirit. Verbatim recovery is the bar.</div>
+      </div>
+    </div>
+    <div class="step">
+      <div class="n">04</div>
+      <div>
+        <h3>Build</h3>
+        <p>The derived direction becomes a full brand identity document that demonstrates the system it describes. Hot orange field, poster type, packed layout. A brand book that shouts, because he does.</p>
+        <div class="rule">Rule: the doc carries its reasons. Each choice states its why, in his words.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="honest">
+    <div class="kicker">Why the test is honest</div>
+    <div class="row">
+      <div>
+        <h3>The key is sealed</h3>
+        <p>The intended answers exist before derivation starts, written down where the deriving agent cannot see them. No moving the goalposts after.</p>
+      </div>
+      <div>
+        <h3>The deriver is blind</h3>
+        <p>It gets two transcript files. Nothing else. It cannot pattern-match a house style it has never seen.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="result">
+    <div class="kicker">The result</div>
+    <table>
+      <tr><td>Three tone words, recovered verbatim: fun, loud, honest</td><td>Hit</td></tr>
+      <tr><td>Palette temperature: bright, saturated, warm. Flame orange, chilli red, turmeric, one pandan pop</td><td>Hit</td></tr>
+      <tr><td>Type energy: poster-shout display, friendly human body face</td><td>Hit</td></tr>
+      <tr><td>All three forbidden directions caught from his own rants</td><td>Hit</td></tr>
+      <tr><td>The feeling: a loud 7am wet market, a friend pulling you in. Same image, reached independently</td><td>Hit</td></tr>
+    </table>
+    <p class="verdict">Five for five. And on a real client, run the same way, the pipeline rebuilt a shipped design system from raw audio transcripts alone.</p>
+  </section>
+
+  <section class="see">
+    <div class="kicker">See it</div>
+    <a href="https://github.com/Aexagon/ghost-client-test">
+      <strong>The repo</strong>
+      Transcripts, sealed key, scoring, and the built identity.
+      <div class="url">github.com/Aexagon/ghost-client-test</div>
+    </a>
+    <a href="https://htmlpreview.github.io/?https://github.com/Aexagon/ghost-client-test/blob/main/DEE_BRAND_IDENTITY.html">
+      <strong>Dee's identity, rendered</strong>
+      The fun part. Open it, it is loud on purpose.
+      <div class="url">htmlpreview.github.io → DEE_BRAND_IDENTITY.html</div>
+    </a>
+  </section>
+
+  <section class="diy">
+    <div class="kicker">Run it yourself</div>
+    <p>You need any capable AI agent and an hour.</p>
+    <ol>
+      <li>Have it invent a person and write their interview transcripts, plus a sealed answer key it saves for later. Feelings only, no design words.</li>
+      <li>In a fresh context, hand over just the transcripts. Ask for colours, type, and layout, each choice traced to a quote.</li>
+      <li>Compare against the key. Grade hard.</li>
+      <li>If it passes, make it build the brand book. If it fails, you learned your agent decorates instead of listens.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <div class="mark">Aexagon</div>
+    <p>Design with reasons</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
