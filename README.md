@@ -4,10 +4,13 @@ A small kit that finds your design taste in the way you talk, then applies it to
 
 ## Quickstart
 
-1. Answer the eight questions in [QUESTIONS.md](QUESTIONS.md) by voice memo. Talk, don't type.
-2. Transcribe the memos, paste them under the prompt in [DERIVE_PROMPT.md](DERIVE_PROMPT.md), give it to a capable AI.
-3. You get back a visual direction: palette with named harmony, type pairing, layout grammar, a voice contract, your own banned list. Every pick cites your words.
-4. Turn it into actual work with [APPLYING_IT.md](APPLYING_IT.md): reels, carousels, posts, anything.
+Two ways in, same result.
+
+**Talk to your phone.** Answer the eight questions in [QUESTIONS.md](QUESTIONS.md) by voice memo, transcribe, paste the transcripts under the prompt in [DERIVE_PROMPT.md](DERIVE_PROMPT.md), give it to a capable AI. Voice is the richest input; rambling is the point.
+
+**Or talk to the AI.** Paste [INTERVIEW_PROMPT.md](INTERVIEW_PROMPT.md) together with [DERIVE_PROMPT.md](DERIVE_PROMPT.md) into a capable AI and say "start". It interviews you in chat, one question at a time, some multiple choice, most open-ended, and it won't touch design until it has asked enough.
+
+Either way you get back a visual direction: palette with named harmony, type pairing, layout grammar, a voice contract, your own banned list. Every pick cites your words. Then turn it into actual work with [APPLYING_IT.md](APPLYING_IT.md): reels, carousels, posts, anything.
 
 ## Why trust it
 
@@ -20,6 +23,7 @@ The whole run is in [example/](example/): transcripts, sealed key, scoring, and 
 | File | What it is |
 |---|---|
 | [QUESTIONS.md](QUESTIONS.md) | Start here. Eight questions plus three sliders, built for rambling |
+| [INTERVIEW_PROMPT.md](INTERVIEW_PROMPT.md) | No memos? The AI interviews you in chat instead |
 | [DERIVE_PROMPT.md](DERIVE_PROMPT.md) | The copy-paste prompt that turns transcripts into a direction |
 | [APPLYING_IT.md](APPLYING_IT.md) | Direction to reels, carousels, and everything else |
 | [example/](example/) | One full test run, end to end, receipts included |

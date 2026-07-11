@@ -4,6 +4,8 @@ Dee's transcripts look like chaos. They aren't. Underneath the steam and the aun
 
 Answer them by talking, not typing. Record a voice memo for each, one minute minimum, then transcribe the lot. If an answer fits in one sentence, you haven't answered yet, keep talking. Adjectives are banned: "professional, modern, clean" tells a designer nothing. Stories, rants and refusals tell them everything.
 
+Rather answer in chat? Use [INTERVIEW_PROMPT.md](INTERVIEW_PROMPT.md) instead; the AI asks you these one at a time, digs when your answers run thin, and only starts designing once it has enough.
+
 ## The eight
 
 **1. The moment.**
