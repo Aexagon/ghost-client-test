@@ -1,47 +1,33 @@
-# Ghost Client Test
+# Design with feel and taste
 
-**Design with feel and taste.**
+A small kit that finds your design taste in the way you talk, then applies it to reels, carousels, and any creative work. Every choice traced to something you actually said. No moodboards, no guessing.
 
-Can a brand's visual identity be derived from nothing but the way a person talks?
+## Quickstart
 
-This repo is one full run of that experiment. A fictional client was invented, "interviewed" by voice memo, and a second AI agent, working blind, derived his colours, type, and layout rules from the transcripts alone. It scored a clean sweep against a sealed answer key it never saw. The derived direction was then built into a complete brand identity document.
+1. Answer the eight questions in [QUESTIONS.md](QUESTIONS.md) by voice memo. Talk, don't type.
+2. Transcribe the memos, paste them under the prompt in [DERIVE_PROMPT.md](DERIVE_PROMPT.md), give it to a capable AI.
+3. You get back a visual direction: palette with named harmony, type pairing, layout grammar, a voice contract, your own banned list. Every pick cites your words.
+4. Turn it into actual work with [APPLYING_IT.md](APPLYING_IT.md): reels, carousels, posts, anything.
 
-## The ghost
+## Why trust it
 
-**Dee (Deepak Nair), 29.** Singapore hawker-food content creator turned wet-market cooking-class founder. Fast talker, Singlish, allergic to pretension. His three words: fun, loud, honest.
+The method was tested on a client who cannot be googled, because he does not exist. One agent invented "Dee", a Singapore hawker-food creator, wrote his messy interview transcripts, and sealed an answer key stating what his brand should feel like. A second agent, blind to the key, derived his direction from the transcripts alone. It scored five for five: tone words verbatim, palette temperature exact, type energy exact, every forbidden direction caught, same feeling in one sentence, independently reached.
 
-## How the test works
-
-1. **Generate.** One agent invents the persona and writes realistic raw voice-memo transcripts, plus `INTENT.md`: a sealed answer key stating the feelings the persona is supposed to give off. The transcripts never use design vocabulary; Dee talks about steam, aunties, and char kway teow, not hex codes.
-2. **Blind derive.** A second agent reads ONLY the transcripts (never the answer key, never any design library) and derives a full visual direction: palette temperature first, then concrete colours, type, layout grammar, and banned moves, every pick traced to a verbatim quote.
-3. **Judge.** A third pass scores the derivation against the sealed key.
-4. **Build.** The winning direction becomes `DEE_BRAND_IDENTITY.html`, a self-contained brand book that demonstrates the system it describes.
-
-## The result
-
-All five criteria hit: tone words recovered verbatim, palette temperature exact (hot orange / chilli / turmeric, one pandan pop), type energy exact (poster-shout display + friendly humanist body), all three "never" categories caught from his rants, and a near-identical one-sentence feeling, independently reached. Full scoring in `TEST_RESULTS.md`.
+The whole run is in [example/](example/): transcripts, sealed key, scoring, and the loud orange identity it produced. Read it to see what good input and good output look like.
 
 ## Files
 
 | File | What it is |
 |---|---|
-| `DEE_VOICE_MEMO_TRANSCRIPTS.md` | The fabricated raw interview, messy on purpose |
-| `DEE_BRAND_VOICE_NOTES.md` | Distilled assistant-style notes |
-| `INTENT.md` | The sealed answer key (spoilers, read last) |
-| `TEST_RESULTS.md` | Judge's scoring |
-| `DEE_BRAND_IDENTITY.html` | The built identity doc. Open it in a browser, it's the fun part |
-| `QUESTIONS.md` | The eight questions under the ramble. Answer them to run this on yourself |
-| `DERIVE_PROMPT.md` | The copy-paste prompt that turns your transcripts into a direction |
+| [QUESTIONS.md](QUESTIONS.md) | Start here. Eight questions plus three sliders, built for rambling |
+| [DERIVE_PROMPT.md](DERIVE_PROMPT.md) | The copy-paste prompt that turns transcripts into a direction |
+| [APPLYING_IT.md](APPLYING_IT.md) | Direction to reels, carousels, and everything else |
+| [example/](example/) | One full test run, end to end, receipts included |
 
-## Run it on yourself
+## The principle
 
-1. Answer the eight questions in [QUESTIONS.md](QUESTIONS.md) by voice memo. Talk, don't type.
-2. Transcribe the memos.
-3. Paste your transcripts under the prompt in [DERIVE_PROMPT.md](DERIVE_PROMPT.md) and give it to a capable AI.
-4. You get back a visual direction, colours, type, layout, banned moves, with every choice traced to something you actually said.
+Design with reasons. A colour you can defend with a quote beats a colour you like. If a choice can't state its reason, change the choice.
 
-## The principle underneath
+---
 
-Design with reasons. Every colour, face, and layout rule in the identity doc states a why traced to something the client actually said. If a choice can't state its reason, it gets changed, not defended.
-
-Dee is entirely fictional. Any resemblance to a real hawker-food creator is a compliment to the generator.
+This repo is a snapshot of a working method, not a maintained product. Built by [Aexagon](https://aexagon.com). MIT licensed, take it and run.

@@ -47,3 +47,7 @@ Return the full report in structured markdown: Part 1 evidence, then Part 2 dire
 ---
 
 Paste your transcripts here.
+
+---
+
+Got your direction back? Take it to [APPLYING_IT.md](APPLYING_IT.md) and make something with it.
