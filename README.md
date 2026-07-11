@@ -1,5 +1,7 @@
 # Ghost Client Test
 
+**Design with taste and feel.**
+
 Can an AI derive a brand's visual identity from nothing but the way a person talks?
 
 This repo is one full run of that experiment. A fictional client was invented, "interviewed" by voice memo, and a second AI agent, working blind, derived his colours, type, and layout rules from the transcripts alone. It scored a clean sweep against a sealed answer key it never saw. The derived direction was then built into a complete brand identity document.
