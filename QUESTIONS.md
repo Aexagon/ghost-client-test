@@ -38,6 +38,16 @@ Describe the physical place where your work is most itself, at its best hour. Th
 What work would you turn down even if it paid well? Why?
 *In Dee's run: anything "atas". The refusal drew the line his whole brand stands behind.*
 
+## And three sliders
+
+Can't name your style? You can still point. Say where you sit on each line, and say it out loud with a reason:
+
+- **Premium ....X.... Accessible**
+- **Modern ....X.... Traditional**
+- **Bold ....X.... Reserved**
+
+*In Dee's run these would have read: accessible to the bone, modern but market-old at heart, bold all the way. The sliders catch what adjectives miss.*
+
 ## Then what
 
 Take your transcripts to [DERIVE_PROMPT.md](DERIVE_PROMPT.md), paste everything into a capable AI, and you'll get back a visual direction with every choice traced to your own words.
