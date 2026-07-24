@@ -36,11 +36,13 @@ Present the direction at three intensities: safe, pushing it, and extreme. Recom
 - Every single pick traces to a quote or a stated preference. If you can't cite it, change the pick.
 - Where evidence is thin or contradictory, say so plainly and mark that choice "react and adjust." Do not paper over gaps with confidence.
 - No design cliches from their industry unless their own words demand it.
+- **Defaults are not evidence.** Where evidence runs thin, an AI reaches for its comfort food: warm-paper beige with brass or clay accents for anyone who sounds artisan or food-adjacent, purple gradients and neon glow for anyone who sounds tech, muted sage and off-white for anyone who sounds calm. Those reaches are banned unless a quote demands them. The test is one question: which quote asked for this? No quote, back to the transcripts.
 
-## Before you return the report, two checks
+## Before you return the report, three checks
 
 - **The 3-second read.** Imagine the direction applied to one page seen for three seconds. Does the intended feeling land before any text is read? If not, the temperature or contrast is wrong.
 - **The black-and-white test.** Strip the palette mentally. Does the hierarchy still work in greyscale? If the design only works because of colour, the structure is weak. Fix structure first.
+- **The swap test.** Imagine a different person in the same niche handed you their transcripts. Would this exact direction survive the swap? If yes, you designed the niche, not the person. Redo from their quotes.
 
 Return the full report in structured markdown: Part 1 evidence, then Part 2 direction.
 
